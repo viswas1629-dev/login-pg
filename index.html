@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Enterprise Login Page" />
+    <title>Enterprise Login</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- Animated Background -->
+    <!-- ========================= -->
+
+    <div class="background">
+
+        <span class="blob blob1"></span>
+        <span class="blob blob2"></span>
+        <span class="blob blob3"></span>
+
+        <div class="particles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- Main Container -->
+    <!-- ========================= -->
+
+    <main class="container">
+
+        <!-- Login Card -->
+
+        <section class="login-card">
+
+            <!-- Logo -->
+
+            <div class="logo-area">
+
+                <div class="logo-circle">
+                    <!-- Replace with your logo -->
+                    <img src="assets/logo.png"
+                        alt="Company Logo"
+                        id="companyLogo">
+                </div>
+
+                <h1>Enterprise</h1>
+
+                <p>Welcome Back</p>
+
+            </div>
+
+            <!-- Login Form -->
+
+            <form id="loginForm" novalidate>
+
+                <!-- Email -->
+
+                <div class="input-group">
+
+                    <span class="icon">
+
+                        <!-- Mail Icon -->
+
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm8 7L4.8 7h14.4L12 12z" />
+                        </svg>
+
+                    </span>
+
+                    <input
+                        type="email"
+                        id="email"
+                        autocomplete="email"
+                        required>
+
+                    <label>Email Address</label>
+
+                    <small class="error"></small>
+
+                </div>
+
+                <!-- Password -->
+
+                <div class="input-group">
+
+                    <span class="icon">
+
+                        <!-- Lock Icon -->
+
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M17 10h-1V8a4 4 0 00-8 0v2H7a2 2 0 00-2 2v8a2 2 0 002 2h10a2 2 0 002-2v-8a2 2 0 00-2-2zm-7-2a2 2 0 114 0v2h-4V8z" />
+                        </svg>
+
+                    </span>
+
+                    <input
+                        type="password"
+                        id="password"
+                        autocomplete="current-password"
+                        required>
+
+                    <label>Password</label>
+
+                    <button
+                        type="button"
+                        id="togglePassword"
+                        class="toggle-password"
+                        aria-label="Show Password">
+
+                        👁
+
+                    </button>
+
+                    <small class="error"></small>
+
+                </div>
+
+                <!-- Remember -->
+
+                <div class="options">
+
+                    <label class="remember">
+
+                        <input
+                            type="checkbox"
+                            id="remember">
+
+                        <span>Remember Me</span>
+
+                    </label>
+
+                    <a href="#">Forgot Password?</a>
+
+                </div>
+
+                <!-- Login Button -->
+
+                <button
+                    id="loginBtn"
+                    class="login-btn"
+                    type="submit">
+
+                    <span class="btn-text">
+
+                        Login
+
+                    </span>
+
+                    <span class="spinner"></span>
+
+                </button>
+
+                <!-- Success -->
+
+                <div class="success-box">
+
+                    <div class="checkmark">
+
+                        ✓
+
+                    </div>
+
+                    <p>Login Successful</p>
+
+                </div>
+
+                <!-- Divider -->
+
+                <div class="divider">
+
+                    <span>OR</span>
+
+                </div>
+
+                <!-- Google -->
+
+                <button
+                    type="button"
+                    class="google-btn">
+
+                    <svg viewBox="0 0 533.5 544.3">
+                        <path fill="#4285F4"
+                            d="M533.5 278.4c0-18.6-1.7-36.5-4.9-53.8H272v101.8h146.9c-6.3 34-25.3 62.8-54 82v68h87.3c51.1-47.1 81.3-116.6 81.3-198z"/>
+                    </svg>
+
+                    Continue with Google
+
+                </button>
+
+            </form>
+
+            <!-- Footer -->
+
+            <footer>
+
+                © 2026 Enterprise. All Rights Reserved.
+
+            </footer>
+
+        </section>
+
+    </main>
+
+    <!-- JS -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
