@@ -7,6 +7,9 @@ const loginForm = document.getElementById("loginForm");
 const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 
+const demoEmail = "viswa@gmail.com";
+const demoPassword = "viswa jack#8";
+
 const rememberCheck = document.getElementById("remember");
 
 const loginBtn = document.getElementById("loginBtn");
@@ -130,21 +133,17 @@ function validateForm() {
 
         valid = false;
 
-    }
-
-    else if (password.length < 8) {
+    } else if (password.length < 7) {
 
         showError(
             passwordInput,
             passwordError,
-            "Minimum 8 characters."
+            "Password must be at least 7 characters."
         );
 
         valid = false;
 
-    }
-
-    else {
+    } else {
 
         clearError(
             passwordInput,
@@ -155,6 +154,14 @@ function validateForm() {
 
     return valid;
 
+}
+
+/* ==========================================
+   CREDENTIAL CHECK
+========================================== */
+
+function authenticateCredentials(email, password) {
+    return email === demoEmail && password === demoPassword;
 }
 
 /* ==========================================
@@ -322,6 +329,18 @@ loginForm.addEventListener("submit", function (event) {
     const isValid = validateForm();
 
     if (!isValid) return;
+
+    const email = emailInput.value.trim();
+    const password = passwordInput.value.trim();
+
+    if (!authenticateCredentials(email, password)) {
+        showError(
+            passwordInput,
+            passwordError,
+            "Email or password is incorrect."
+        );
+        return;
+    }
 
     handleRememberMe();
 
